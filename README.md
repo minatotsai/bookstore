@@ -7,37 +7,37 @@
 4.我的購物車(能修改下單數量或刪除該筆單據)</br>
 
 資料表</br>
-book
-int		book_id		pk
-String		book_name
-int		book_class
-int		book_quantity
-int		book_status
-binary		book_img
-timestamp	createtime
-timestamp	updatetime
+book</br>
+int		book_id		pk</br>
+String		book_name</br>
+int		book_class</br>
+int		book_quantity</br>
+int		book_status</br>
+binary		book_img</br>
+timestamp	createtime</br>
+timestamp	updatetime</br>
 
-user
-int		user_id		pk
-string		user_account
-string		user_password
-timestamp	createtime
-timestamp	updatetime
+user</br>
+int		user_id		pk</br>
+string		user_account</br>
+string		user_password</br>
+timestamp	createtime</br>
+timestamp	updatetime</br>
 
-shoppingcart
-int		user_id
-int		book_id
-int		book_buy_quantity
-timestamp	createtime
-timestamp	updatetime
+shoppingcart</br>
+int		user_id</br>
+int		book_id</br>
+int		book_buy_quantity</br>
+timestamp	createtime</br>
+timestamp	updatetime</br>
 
-order
-int		order_id
-int		user_id
-int		book_id
-int		book_buy_quantity
-timestamp	createtime
-timestamp	updatetime
+order</br>
+int		order_id</br>
+int		user_id</br>
+int		book_id</br>
+int		book_buy_quantity</br>
+timestamp	createtime</br>
+timestamp	updatetime</br>
 
 ------------------------------------
 
