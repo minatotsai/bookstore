@@ -8,7 +8,7 @@
 
 資料表</br>
 book</br>
-int		book_id		pk</br>
+int		book_id		<font color="red">pk</font></br>
 String		book_name</br>
 int		book_class</br>
 int		book_quantity</br>
@@ -18,7 +18,7 @@ timestamp	createtime</br>
 timestamp	updatetime</br>
 
 user</br>
-int		user_id		pk</br>
+int		user_id		<font color="red">pk</font></br>
 string		user_account</br>
 string		user_password</br>
 timestamp	createtime</br>
