@@ -13,6 +13,7 @@ String		book_name</br>
 int		book_class</br>
 int		book_quantity</br>
 int		book_status</br>
+int		book_price</br>
 binary		book_img</br>
 timestamp	createtime</br>
 timestamp	updatetime</br>
@@ -28,6 +29,7 @@ shoppingcart</br>
 int		user_id</br>
 int		book_id</br>
 int		book_buy_quantity</br>
+int		book_price</br>
 timestamp	createtime</br>
 timestamp	updatetime</br>
 
@@ -36,6 +38,7 @@ int		order_id</br>
 int		user_id</br>
 int		book_id</br>
 int		book_buy_quantity</br>
+int		book_price</br>
 timestamp	createtime</br>
 timestamp	updatetime</br>
 
