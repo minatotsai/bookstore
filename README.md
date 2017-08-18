@@ -1,6 +1,6 @@
 # bookstore
-
-網路書城-購物車(Bbookstore)</br>
+use PHP7.1 ,apache2.4,mysql5.7,framework:Laravel5.4,windows10
+網路書城-購物車(Bookstore)</br>
 1.登入登出</br>
 2.創立會員帳號</br>
 3.修改會員密碼搜尋書籍(全部書籍、搜尋中文書、搜尋外文書)</br>
@@ -15,23 +15,24 @@ int		book_quantity</br>
 int		book_status</br>
 int		book_price</br>
 binary		book_img</br>
-timestamp	createtime</br>
-timestamp	updatetime</br>
+timestamp	created_at</br>
+timestamp	updated_at</br>
 
 members</br>
 int		member_id		(PRIMARY KEY)</br>
 string		member_account</br>
-string		member_password</br>
-timestamp	createtime</br>
-timestamp	updatetime</br>
+string		password</br>
+string		remember_token</br>
+timestamp	created_at</br>
+timestamp	updated_at</br>
 
 shoppingcart</br>
 int		member_id</br>
 int		book_id</br>
 int		book_buy_quantity</br>
 int		book_price</br>
-timestamp	createtime</br>
-timestamp	updatetime</br>
+timestamp	created_at</br>
+timestamp	updated_at</br>
 
 order</br>
 int		order_id</br>
@@ -39,8 +40,8 @@ int		member_id</br>
 int		book_id</br>
 int		book_buy_quantity</br>
 int		book_price</br>
-timestamp	createtime</br>
-timestamp	updatetime</br>
+timestamp	created_at</br>
+timestamp	updated_at</br>
 
 ------------------------------------
 
