@@ -1,5 +1,5 @@
 # bookstore
-use PHP7.1 ,apache2.4,mysql5.7,framework:Laravel5.4,windows10
+use PHP7.1 ,apache2.4,mysql5.7,framework:Laravel5.4,windows10</br>
 網路書城-購物車(Bookstore)</br>
 1.登入登出</br>
 2.創立會員帳號</br>
