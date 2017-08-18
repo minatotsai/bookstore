@@ -1,44 +1,8 @@
-# bookstore
+2017/08/18 16:54
 
-網路書城-購物車(Bbookstore)</br>
-1.登入登出</br>
-2.創立會員帳號</br>
-3.修改會員密碼搜尋書籍(全部書籍、搜尋中文書、搜尋外文書)</br>
-4.我的購物車(能修改下單數量或刪除該筆單據)</br>
+目前登入畫面</br>
 
-資料表</br>
-books</br>
-int		book_id		(PRIMARY KEY)</br>
-String		book_name</br>
-int		book_class</br>
-int		book_quantity</br>
-int		book_status</br>
-binary		book_img</br>
-timestamp	createtime</br>
-timestamp	updatetime</br>
+![login](https://user-images.githubusercontent.com/30998953/29451559-adedeb4e-8435-11e7-961e-25d6ce418a88.png)
 
-members</br>
-int		member_id	(PRIMARY KEY)</br>
-string		member_account</br>
-string		member_password</br>
-timestamp	createtime</br>
-timestamp	updatetime</br>
-
-shoppingcart</br>
-int		member_id</br>
-int		book_id</br>
-int		book_buy_quantity</br>
-timestamp	createtime</br>
-timestamp	updatetime</br>
-
-order</br>
-int		order_id</br>
-int		member_id</br>
-int		book_id</br>
-int		book_buy_quantity</br>
-timestamp	createtime</br>
-timestamp	updatetime</br>
-
-------------------------------------
-
-
+在使用者進行登入後會進入顯示所有書籍的畫面</br>
+![after_login](https://user-images.githubusercontent.com/30998953/29451677-23884fa2-8436-11e7-9c73-687bbbb9cb58.png)
