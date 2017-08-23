@@ -18,16 +18,17 @@ binary		book_img</br>
 timestamp	created_at</br>
 timestamp	updated_at</br>
 
-members</br>
-int		member_id		(PRIMARY KEY)</br>
-string		member_account</br>
+users</br>
+int		user_id		(PRIMARY KEY)</br>
+string		user_account</br>
 string		password</br>
 string		remember_token</br>
 timestamp	created_at</br>
 timestamp	updated_at</br>
 
-shoppingcart</br>
-int		member_id</br>
+shoppingcarts</br>
+int   cart_id   (PRIMARY KEY)</br>
+int		user_id</br>
 int		book_id</br>
 int		book_buy_quantity</br>
 int		book_price</br>
