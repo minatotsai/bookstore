@@ -1,4 +1,17 @@
 <?php $__env->startSection('content'); ?>
+<?php if($errors->any()): ?>
+    <div class="alert alert-danger">
+        <strong><?php echo e($errors->first('errors')); ?></strong>
+    </div>
+<?php endif; ?>
+<?php if(\Session::has('success')): ?>
+    <div class="alert alert-success">
+        <ul>
+            <li><?php echo \Session::get('success'); ?></li>
+        </ul>
+    </div>
+<?php endif; ?>
+
 	<div class="starter-template">
 		<table class = "table table-hover">
 		<tr>
@@ -19,19 +32,20 @@
 		<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 		</table>
     </div>
-<?php $__env->stopSection(); ?>
+<?php $__env->stopSection(); ?>	
+
 
 <script src="<?php echo e(asset('js/jquery.min.js')); ?>"></script>
 <script>
 
 $(document).ready(function(){	
 	$( ".table tbody" ).on("click",'tr td #insert-btn',function() {
-			    
-			    var id = $(this).parents('tr:first').attr('book_id');
-				var buy_quantity = document.getElementById('buy_quantity').value;
+			    var id = $(this).parents('tr:first').attr('book_id');				
+				var buy_quantity = $(this).closest('tr').find('#buy_quantity').val();
 				var data = id + "," + buy_quantity;
-			    //alert(data);
-				window.location.href = "<?php echo e(URL::to('books/1,11/create')); ?>"
+				history.pushState(null, null, '/books');
+				//alert(buy_quantity);
+				window.location.href = "books\\" + data + "\\create";
 				
 	});	
 });

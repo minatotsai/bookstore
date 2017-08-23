@@ -22,3 +22,4 @@ Route::post('/login', 'LoginController@index')->name('login');
 Route::get('/books', 'BooksController@index')->name('books');
 Route::get('books/{class}/show', 'BooksController@show')->name('books/show');
 Route::get('books/{class}/create', 'BooksController@create')->name('books/create');
+Route::get('/carts', 'CartsController@index')->name('carts');
