@@ -15,6 +15,7 @@
 	<div class="starter-template">
 		<table class = "table table-hover">
 		<tr>
+			<td>圖片</td>
 			<td>書籍名稱</td>
 			<td>書籍價格</td>
 			<td>剩餘數量</td>
@@ -22,7 +23,7 @@
 		</tr>
 		<?php $__currentLoopData = $query; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $var): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 		<tr book_id="<?php echo e($var->book_id); ?>">
-			
+			<td><img src="<?php echo e(asset('img/'.$var->book_img_name)); ?>" alt="" width="80" height="100"></td>	
 			<td><?php echo e($var->book_name); ?></td>
 			<td><?php echo e($var->book_price); ?></td>
 			<td><?php echo e($var->book_quantity); ?></td>

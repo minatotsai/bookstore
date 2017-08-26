@@ -18,19 +18,14 @@
 		<table class = "table table-hover">
 		<tr>
 			<td>圖片</td>
-			<td>書籍名稱</td>
-			<td>書籍價格</td>
-			<td>剩餘數量</td>
-			<td>加入購物車</td>
+			<td>書籍名稱</td>	
+			<td>編輯</td>
 		</tr>
 		@foreach ($query as $var)
 		<tr book_id="{{$var->book_id}}">
-			<td><img src="{{asset('img/'.$var->book_img_name)}}" alt="" width="80" height="100"></td>	
-			<td>{{$var->book_name}}</td>
-			<td>{{$var->book_price}}</td>
-			<td>{{$var->book_quantity}}</td>
-			<td><input type="text" name="buy_quantity" id="buy_quantity" value="1"></td>
-			<td><a href="#" role="btn" class="btn btn-warning" id="insert-btn">加入購物車</a></td>
+			<td><img src="{{asset('img/'.$var->book_img_name)}}" alt="" width="80" height="100"></td>		
+			<td>{{$var->book_name}}</td>		
+			<td><a href="{{url('images/'.$var->book_id.'/show')}}" role="btn" class="btn btn-warning" id="insert-btn">編輯</a></td>
 		</tr>
 		@endforeach
 		</table>
@@ -40,7 +35,7 @@
 
 <script src="{{asset('js/jquery.min.js') }}"></script>
 <script>
-
+/*
 $(document).ready(function(){	
 	$( ".table tbody" ).on("click",'tr td #insert-btn',function() {
 			    var id = $(this).parents('tr:first').attr('book_id');				
@@ -52,5 +47,5 @@ $(document).ready(function(){
 				
 	});	
 });
-
+*/
 </script>

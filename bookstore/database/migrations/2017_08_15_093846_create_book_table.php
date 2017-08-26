@@ -21,6 +21,8 @@ class CreateBookTable extends Migration
 			$table->integer('book_status')->nullable(false);
 			$table->binary('book_img')->nullable(true);
 			$table->integer('book_price')->nullable(false);
+			$table->string('book_img_name')->nullable(true);			
+			$table->rememberToken();
             $table->timestamps();			
         });
     }
