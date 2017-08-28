@@ -65,7 +65,12 @@ timestamp|created_at
 timestamp|updated_at
 
 ------------------------------------
-
-
-
+使用教學</BR>
+右上方能點選登入或是註冊
+![login](https://user-images.githubusercontent.com/30998953/29787854-1324e6e0-8c63-11e7-8d45-fe070472ca6c.jpg)
+登入後進去主畫面，左方能夠選擇搜尋書籍的方式，而右上方能選擇使用者功能
+![index](https://user-images.githubusercontent.com/30998953/29787621-2a2c91e0-8c62-11e7-8e8b-05d994c8f397.jpg)
+當選擇右上方購物車籃的功能時，則會出現以下畫面
+![cart](https://user-images.githubusercontent.com/30998953/29787620-2a22ff72-8c62-11e7-9a1b-e0b21c7b10bf.jpg)
+在此會顯示使用者所購買的書籍以及全部金額，也能在此修改或刪除放入購物籃內的資料，使用者無法編輯超過現有書籍的數量
 
