@@ -1,5 +1,9 @@
 # bookstore
-use PHP7.1 ,apache2.4,mysql5.7,framework:Laravel5.4,windows10</br>
+use PHP7.1</br>
+apache2.4</br>
+mysql5.7</br>
+framework:Laravel5.4</br>
+windows10</br>
 網路書城-購物車(Bookstore)</br>
 1.登入登出</br>
 2.創立會員帳號</br>
@@ -7,54 +11,59 @@ use PHP7.1 ,apache2.4,mysql5.7,framework:Laravel5.4,windows10</br>
 4.我的購物車(能修改下單數量或刪除該筆單據)</br>
 
 資料表</br>
-books</br>
-|----------------------------------|
-|int		     |  book_id		(PK)     |</br>
-|String		   |  book_name          |</br>
-|int		     |  book_class         |</br>
-|int		     |  book_quantity      |</br>
-|int		     |  book_status        |</br>
-|String		   |  book_img_name      |</br>
-|binary		   |  book_img           |</br>
-|int		     |  book_price         |</br>
-|String		   |  remember_token     |</br>
-|timestamp	 |  created_at         |</br> 
-|timestamp	 |  updated_at         |</br>    
-|----------------------------------|
+books
 
-users</br>
-|----------------------------------|
-|int	        |  user_id	(PK)     |</br>
-|string       |  user_account      |</br>
-|string       |  password          |</br>
-|string       |  remember_token    |</br>
-|timestamp    |  created_at        |</br>
-|timestamp    |  updated_at        |</br>
-|----------------------------------|
+Datatype|Column Name
+---|---
+int|book_id (PK)
+String|book_name
+int|book_class
+int|book_quantity
+int|book_status
+String|book_img_name
+binary|book_img
+int|book_price
+String|remember_token
+timestamp|created_at
+timestamp|updated_at
 
-shoppingcarts</br>
-|----------------------------------|
-|int          |  cart_id  (PK)     |</br>
-|int		      |  user_id           |</br>
-|int		      |  book_id           |</br>
-|int		      |  book_buy_quantity |</br>
-|int		      |  book_price        |</br>
-|timestamp    |	 created_at        |</br>
-|timestamp    |	 updated_at        |</br>
-|----------------------------------|
+users
 
-order</br>
-|----------------------------------|
-|int		      |  order_id  (PK)    |</br>
-|int		      |  buy_id            |</br>
-|int		      |  user_id           |</br>
-|int		      |  book_id           |</br>
-|int		      |  book_buy_quantity |</br>
-|int		      |  book_price        |</br>
-|string       |  remember_token    |</br>
-|timestamp	  |  created_at        |</br>
-|timestamp	  |  updated_at        |</br>
-|----------------------------------|
+Datatype|Column Name
+---|---
+int|user_id	(PK)
+string|user_account
+string|password
+string|remember_token
+timestamp|created_at
+timestamp|updated_at
+
+shoppingcarts
+
+Datatype|Column Name
+---|---
+int|cart_id  (PK)
+int|user_id
+int|book_id
+int|book_buy_quantity
+int|book_price
+timestamp|created_at
+timestamp|updated_at
+
+orders
+
+Datatype|Column Name
+---|---
+int|order_id  (PK)
+int|buy_id
+int|user_id
+int|book_id
+int|book_buy_quantity
+int|book_price
+string|remember_token
+timestamp|created_at
+timestamp|updated_at
+
 ------------------------------------
 
 
