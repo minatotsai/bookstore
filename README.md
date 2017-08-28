@@ -8,42 +8,55 @@ use PHP7.1 ,apache2.4,mysql5.7,framework:Laravel5.4,windows10</br>
 
 資料表</br>
 books</br>
-int		book_id		(PRIMARY KEY)</br>
-String		book_name</br>
-int		book_class</br>
-int		book_quantity</br>
-int		book_status</br>
-int		book_price</br>
-binary		book_img</br>
-timestamp	created_at</br>
-timestamp	updated_at</br>
+|----------------------------------|
+|int		     |  book_id		(PK)     |</br>
+|String		   |  book_name          |</br>
+|int		     |  book_class         |</br>
+|int		     |  book_quantity      |</br>
+|int		     |  book_status        |</br>
+|String		   |  book_img_name      |</br>
+|binary		   |  book_img           |</br>
+|int		     |  book_price         |</br>
+|String		   |  remember_token     |</br>
+|timestamp	 |  created_at         |</br> 
+|timestamp	 |  updated_at         |</br>    
+|----------------------------------|
 
 users</br>
-int		user_id		(PRIMARY KEY)</br>
-string		user_account</br>
-string		password</br>
-string		remember_token</br>
-timestamp	created_at</br>
-timestamp	updated_at</br>
+|----------------------------------|
+|int	        |  user_id	(PK)     |</br>
+|string       |  user_account      |</br>
+|string       |  password          |</br>
+|string       |  remember_token    |</br>
+|timestamp    |  created_at        |</br>
+|timestamp    |  updated_at        |</br>
+|----------------------------------|
 
 shoppingcarts</br>
-int   cart_id   (PRIMARY KEY)</br>
-int		user_id</br>
-int		book_id</br>
-int		book_buy_quantity</br>
-int		book_price</br>
-timestamp	created_at</br>
-timestamp	updated_at</br>
+|----------------------------------|
+|int          |  cart_id  (PK)     |</br>
+|int		      |  user_id           |</br>
+|int		      |  book_id           |</br>
+|int		      |  book_buy_quantity |</br>
+|int		      |  book_price        |</br>
+|timestamp    |	 created_at        |</br>
+|timestamp    |	 updated_at        |</br>
+|----------------------------------|
 
 order</br>
-int		order_id</br>
-int		member_id</br>
-int		book_id</br>
-int		book_buy_quantity</br>
-int		book_price</br>
-timestamp	created_at</br>
-timestamp	updated_at</br>
-
+|----------------------------------|
+|int		      |  order_id  (PK)    |</br>
+|int		      |  buy_id            |</br>
+|int		      |  user_id           |</br>
+|int		      |  book_id           |</br>
+|int		      |  book_buy_quantity |</br>
+|int		      |  book_price        |</br>
+|string       |  remember_token    |</br>
+|timestamp	  |  created_at        |</br>
+|timestamp	  |  updated_at        |</br>
+|----------------------------------|
 ------------------------------------
+
+
 
 
