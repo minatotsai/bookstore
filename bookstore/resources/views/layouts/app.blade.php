@@ -79,7 +79,7 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-									<li><a href="carts">我的購物籃</a></li>
+									<li><a href="/carts">我的購物籃</a></li>
                                 </ul>
                             </li>
                         @endif

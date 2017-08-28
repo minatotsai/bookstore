@@ -10,55 +10,37 @@
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('user_account') ? ' has-error' : '' }}">
+                        <div class="form-group">
                             <label for="user_account" class="col-md-4 control-label">Account</label>
 
                             <div class="col-md-6">
                                 <input id="user_account" type="user_account" class="form-control" name="user_account" value="{{ old('user_account') }}" required autofocus>
-
-                                @if ($errors->has('user_account'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('user_account') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                            <label for="password" class="col-md-4 control-label">Password</label>
 
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" name="password" required>
+                            </div>													
+							
+                        </div>
+						
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Login
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
                             </div>
                         </div>
+						
+						@if ($errors->any())
+							<div class="alert alert-danger">
+								<strong>{{ $errors->first('errors') }}</strong>
+							</div>
+						@endif
                     </form>
                 </div>
             </div>

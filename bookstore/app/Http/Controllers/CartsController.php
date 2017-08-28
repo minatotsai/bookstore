@@ -33,7 +33,7 @@ class CartsController extends Controller
 	*/
 	
 	//	$query = Shoppingcart::where('user_id', $user)->get();
-			return view('carts', compact('query'));
+		return view('carts', compact('query'));
 	
     }
 	

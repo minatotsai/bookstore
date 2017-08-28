@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/login';
 
 	public function index(Request $request)
     {
@@ -48,9 +48,9 @@ class LoginController extends Controller
 				return Redirect()->intended(route('books'));
 				
 		}
-		/*
-		return Redirect()->back()->withInput($request->only('user_account','remember'));
-		*/
+		
+		return Redirect()->back()->withErrors(['errors' => '帳號或密碼錯誤!!',]);
+	
     }
 	
     /**

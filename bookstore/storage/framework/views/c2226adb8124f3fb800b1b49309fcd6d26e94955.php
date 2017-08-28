@@ -19,6 +19,10 @@
                                     <span class="help-block">
                                         <strong><?php echo e($errors->first('user_account')); ?></strong>
                                     </span>
+								<?php elseif($errors->has('errors')): ?>
+									<span class="help-block">
+                                        <strong><?php echo e($errors->first('errors')); ?></strong>
+                                    </span>
                                 <?php endif; ?>
                             </div>
                         </div>

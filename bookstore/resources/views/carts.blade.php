@@ -13,6 +13,9 @@
         </ul>
     </div>
 @endif
+@php
+	$total = 0;
+@endphp
 	<div class="starter-template">
 		<table class = "table table-hover">
 		<tr>
@@ -28,16 +31,26 @@
 			<td>{{$var->book_name}}</td>
 			<td>{{$var->book_price}}</td>
 			<td>{{$var->book_quantity}}</td>
+			
 			<td><input type="text" name="buy_quantity" id="buy_quantity" value="{{$var->book_buy_quantity}}"></td>
 			<td><a href="#" role="btn" class="btn btn-warning" id="update-btn">修改</a></td>
 			<td><a href="#" role="btn" class="btn btn-danger" id="delete-btn">刪除</a></td>
 		</tr>
+		@php
+			$total = $total + ($var->book_price)*($var->book_buy_quantity);			
+		@endphp
 		@endforeach
 		</table>
     </div>
+	@php
+		if($total != 0)
+		{
+		echo "<div align=\"right\">";
+		echo "<span style=\"color:red;font-size:1cm;\">總和:$total</span>";
+		echo "</div>";
+		}
+	@endphp
 @endsection	
-
-
 
 <script src="{{asset('js/jquery.min.js') }}"></script>
 <script>

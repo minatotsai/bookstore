@@ -14,4 +14,11 @@ class Shoppingcart extends Model
     ];
 	
 	public $timestamps = true;
+	
+	
+	public function getTotalPriceAttribute() 
+	{
+    return $this->book_buy_quantity * $this->book_price;
+	}
+
 }

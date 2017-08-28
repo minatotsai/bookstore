@@ -47,10 +47,27 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
+        $validator = Validator::make($data, [
             'user_account' => 'required|string|max:255',            
             'password' => 'required|string|min:6|confirmed',
         ]);
+			
+		$user_count = User::where('user_account', $data['user_account'])->count();
+		
+		$validator->after(function($validator) use($user_count)
+			{
+				if($user_count == 1)
+				{
+					$validator->errors()->add('errors', '帳號重複!!');
+				}
+			});
+		/*
+		 if ($validator->fails())
+			{
+				return redirect()->back()->withErrors($validator->errors());
+			}
+		*/
+		return $validator;
     }
 
     /**
@@ -60,7 +77,7 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(array $data)
-    {
+    {	
         return User::create([
             'user_account' => $data['user_account'],
             'password' => bcrypt($data['password']),

@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\book;
+use App\User;
 use Auth;
-use App\member;
 use App\Shoppingcart;
 use Illuminate\Http\Response;
 

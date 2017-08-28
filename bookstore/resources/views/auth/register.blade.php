@@ -20,6 +20,10 @@
                                     <span class="help-block">
                                         <strong>{{ $errors->first('user_account') }}</strong>
                                     </span>
+								@elseif ($errors->has('errors'))
+									<span class="help-block">
+                                        <strong>{{ $errors->first('errors') }}</strong>
+                                    </span>
                                 @endif
                             </div>
                         </div>
