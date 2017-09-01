@@ -4,6 +4,8 @@ apache2.4</br>
 mysql5.7</br>
 framework:Laravel5.4</br>
 windows10</br>
+aws-ubuntu16.04</br>
+
 網路書城-購物車(Bookstore)</br>
 1.登入登出</br>
 2.創立會員帳號</br>
