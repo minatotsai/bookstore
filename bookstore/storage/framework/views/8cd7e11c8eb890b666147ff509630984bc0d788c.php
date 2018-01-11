@@ -69,6 +69,8 @@
                                 </a>
 						
                                 <ul class="dropdown-menu" role="menu">
+									<li><a href="/carts">我的購物籃</a></li>
+									<li><a href="/order">我的所有訂單</a></li>
                                     <li>
                                         <a href="<?php echo e(route('logout')); ?>"
                                             onclick="event.preventDefault();
@@ -81,7 +83,6 @@
 
                                         </form>
                                     </li>
-									<li><a href="/carts">我的購物籃</a></li>
                                 </ul>
                             </li>
                         <?php endif; ?>

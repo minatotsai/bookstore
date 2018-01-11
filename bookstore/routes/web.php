@@ -30,4 +30,12 @@ Route::group(['middleware' => ['auth']], function(){
 	Route::get('images/{id}/show', 'ImagesController@show')->name('images/show');
 	//Route::get('imagesEdit', 'ImagesController@edit')->name('imagesEdit');
 	Route::post('images/edit', 'ImagesController@edit')->name('images/edit');
+	
+	Route::post('pay', 'PayController@index')->name('payChoice');
+	Route::get('paySet', 'PayController@create')->name('setOrder');
+	Route::post('payTest','PayController@store')->name('test');
+	
+	Route::get('allpaytest', 'PayController@test')->name('alltest');
+	
+	Route::get('order', 'OrdersController@index')->name('orderList');
 });

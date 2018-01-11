@@ -68,6 +68,8 @@
                                 </a>
 						
                                 <ul class="dropdown-menu" role="menu">
+									<li><a href="/carts">我的購物籃</a></li>
+									<li><a href="/order">我的所有訂單</a></li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
@@ -79,7 +81,6 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-									<li><a href="/carts">我的購物籃</a></li>
                                 </ul>
                             </li>
                         @endif

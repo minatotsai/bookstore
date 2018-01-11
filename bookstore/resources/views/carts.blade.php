@@ -50,6 +50,12 @@
 		echo "</div>";
 		}
 	@endphp
+	
+	<form action="pay" method ="post" onSubmit="return confirm('確認進入繳費流程?');">
+	<input type="submit" class="btn btn-success" value = "繳費">
+	 {{ csrf_field() }}
+	</form>
+	
 @endsection	
 
 <script src="{{asset('js/jquery.min.js') }}"></script>
